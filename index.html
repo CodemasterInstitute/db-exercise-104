@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercise 104</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+
+        <section id="welcome">
+
+        </section>
+
+        <section class="tabs" id="tabs">
+
+            <h2>
+                INTERMEDIATE exercise #1
+            </h2>
+
+            <p>
+                In this exercise we are going to trigger an AJAX GET request each time the user clicks on a tab menu item. This request will return the markup that is associated with the tabs content, and once returned we will need to inject it into the div#tabContent element (and replace what was there).
+            </p>
+
+            <p>
+                Make some room near the end of the 'onload' function and complete these steps...
+            </p>
+
+            <ol>
+                <li>
+                    Find all the tab-menu list item elements (the 3 of them)
+                </li>
+                <li>
+                    Create an onMenuItemClick function and assign it individually to each of these elements - yes we've done this before ;)
+                </li>
+                <li>
+                    Within the onclick function, find the 'data-content-url' attribute value the clicked element
+                </li>
+                <li>
+                    Invoke an AJAX request to the content-url provided in the attribute
+                </li>
+                <li>
+                    Find the div#tabContent element and set the inner html of this element to what was returned in the AJAX request
+                </li>
+            </ol>
+
+            <h2>
+                INTERMEDIATE exercise #2
+            </h2>
+
+            <p>
+                Lets neaten things up a bit
+            </p>
+
+            <ol>
+                <li>
+                    For the duration of the AJAX requests, apply the 'loading' CSS class to the div#tabContent element. So apply it just prior to making the and then remove the class as soon as we get the response back.
+                </li>
+                <li>
+                    Now lets ensure that the first tab is loading by default. A simple way to do this is the manually invoke the click event just after we assign the onclick event.
+                </li>
+            </ol>
+
+            <nav class="tabs-menu">
+                <ul>
+                    <li data-content-url="partials/tab1.html">tab 1</li>
+                    <li data-content-url="partials/tab2.html">tab 2</li>
+                    <li data-content-url="partials/tab3.html">tab 3</li>
+                </ul>
+            </nav>
+
+            <div class="tab-wrapper">
+                <div id="tabContent"></div>
+            </div>
+
+        </section>
+
+        <section>
+            
+            <h2>
+                EXPERT exercise
+            </h2>
+
+            <p>
+                Lets remove the dependancy on JQuery.
+            </p>
+
+            <ol>
+                <li>
+                    Read this article: https://www.kirupa.com/html5/making_http_requests_js.htm
+                </li>
+                <li>
+                    Create a function that can behave as a fallback for when JQuery does not exist. Use the code structure provided in the script.js file.
+                </li>
+            </ol>
+
+        </section>
+
+        <footer id="footer">
+            
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="scripts.js"></script>
+	</body>
+</html>
