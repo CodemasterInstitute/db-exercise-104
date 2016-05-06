@@ -16,6 +16,10 @@ ul {
 	list-style-type: none;
 }
 
+.alert {
+	margin: 20px;
+}
+
 /* TABS CLASSES */
 
 .tabs {  }
